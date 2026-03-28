@@ -1,0 +1,11 @@
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
+Build target 'f103c8t6_Leraning_Project'
+compiling pwm.c...
+..\User\pwm.c(9): error:  #44: expression must have pointer type
+      PWM_LED_ARR = __HAL_TIM_GET_AUTORELOAD(PWM_LED_TIM);
+..\User\pwm.c(24): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\pwm.c: 1 warning, 1 error
+"f103c8t6_Leraning_Project\f103c8t6_Leraning_Project.axf" - 1 Error(s), 1 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:01

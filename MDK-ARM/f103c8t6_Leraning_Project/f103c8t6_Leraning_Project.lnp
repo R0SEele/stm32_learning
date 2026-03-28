@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"f103c8t6_leraning_project\startup_stm32f103xb.o"
+"f103c8t6_leraning_project\main.o"
+"f103c8t6_leraning_project\gpio.o"
+"f103c8t6_leraning_project\tim.o"
+"f103c8t6_leraning_project\stm32f1xx_it.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_msp.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_gpio_ex.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_tim.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_tim_ex.o"
+"f103c8t6_leraning_project\stm32f1xx_hal.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_rcc.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_rcc_ex.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_gpio.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_dma.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_cortex.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_pwr.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_flash.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_flash_ex.o"
+"f103c8t6_leraning_project\stm32f1xx_hal_exti.o"
+"f103c8t6_leraning_project\system_stm32f1xx.o"
+"f103c8t6_leraning_project\led.o"
+"f103c8t6_leraning_project\key.o"
+"f103c8t6_leraning_project\pwm.o"
+--strict --scatter "f103c8t6_Leraning_Project\f103c8t6_Leraning_Project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "f103c8t6_Leraning_Project.map" -o f103c8t6_Leraning_Project\f103c8t6_Leraning_Project.axf
