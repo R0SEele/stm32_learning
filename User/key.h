@@ -32,7 +32,7 @@
 // 函数声明
 void Key_Scan(void);
 void Key_Scan_TIM(void);
-uint8_t Key_Get_Click(uint8_t Key_ID);
-uint8_t Key_Get_Hold(uint8_t Key_ID);
+uint8_t Key_Get_Click(uint8_t key_id);
+uint8_t Key_Get_Hold(uint8_t key_id);
 
 #endif /* __KEY_H */

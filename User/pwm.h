@@ -1,19 +1,21 @@
 #ifndef __PWM_H__
 #define __PWM_H__
 
-#include "gpio.h"
+#include "main.h"
 #include "tim.h"
-#include "stm32f1xx_hal_tim.h"
 
-// 对模块的引脚进行宏定义 便于工程移植和管理
+#define PWM_LED_TIM htim1
 
-#define PWM_LED_TIM htim1        // LED 定时器
-#define PWM_LED_CH TIM_CHANNEL_1 // LED 定时器通道
-
-extern uint16_t PWM_LED_ARR;
+#define PWM_LED_CH TIM_CHANNEL_1
 
 void PWM_Init(void);
-void PWM_SetDutyCycle(TIM_HandleTypeDef *tim, uint32_t ch, uint16_t duty);
 void PWM_Start(TIM_HandleTypeDef *tim, uint32_t ch);
+void PWM_Stop(TIM_HandleTypeDef *tim, uint32_t ch);
+void PWM_SetDutyCycle(TIM_HandleTypeDef *tim, uint32_t ch, uint16_t duty);
+void PWM_SetDutyCycle_Percent(TIM_HandleTypeDef *tim, uint32_t ch, float percent);
+void PWM_Start_IT(TIM_HandleTypeDef *tim, uint32_t ch);
+void PWM_Stop_IT(TIM_HandleTypeDef *tim, uint32_t ch);
+void PWM_Start_DMA(TIM_HandleTypeDef *tim, uint32_t ch, uint32_t *pData, uint16_t length);
+void PWM_Stop_DMA(TIM_HandleTypeDef *tim, uint32_t ch);
 
-#endif /*__ PWM_H__ */
+#endif /* __PWM_H__ */

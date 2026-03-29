@@ -9,9 +9,9 @@ uint8_t Key_Hold_Flag[KEY_NUM] = {0};    // 长按标志
 uint8_t Key_Hold_Trigger[KEY_NUM] = {0}; // 长按松开触发标志
 
 // 读取按键电平
-uint8_t Key_ReadPin(uint8_t Key_ID)
+uint8_t Key_ReadPin(uint8_t key_id)
 {
-    switch (Key_ID)
+    switch (key_id)
     {
     case KEY1:
         return HAL_GPIO_ReadPin(KEY1_GPIO_PORT, KEY1_GPIO_PIN);
@@ -76,22 +76,22 @@ void Key_Scan_TIM(void)
 }
 
 // 获取单击
-uint8_t Key_Get_Click(uint8_t Key_ID)
+uint8_t Key_Get_Click(uint8_t key_id)
 {
-    if (Key_Trigger[Key_ID] == 1)
+    if (Key_Trigger[key_id] == 1)
     {
-        Key_Trigger[Key_ID] = 0;
+        Key_Trigger[key_id] = 0;
         return 1;
     }
     return 0;
 }
 
 // 获取长按（松开执行）
-uint8_t Key_Get_Hold(uint8_t Key_ID)
+uint8_t Key_Get_Hold(uint8_t key_id)
 {
-    if (Key_Hold_Trigger[Key_ID] == 1)
+    if (Key_Hold_Trigger[key_id] == 1)
     {
-        Key_Hold_Trigger[Key_ID] = 0;
+        Key_Hold_Trigger[key_id] = 0;
         return 1;
     }
     return 0;
